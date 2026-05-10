@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Solar System</title>
+
+  <!-- Linking the main CSS file for styling -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- Header section containing logo and navigation menu -->
+<header class="site-header">
+    <div class="logo-area">
+
+        <!-- Website logo -->
+        <img src="images/logo.png" alt="Site logo" class="site-logo">
+
+        <!-- Website title and tagline -->
+        <div class="logo-text">
+            <h1 class="site-title">Big Planetarium</h1>
+            <p class="tagline">Space is for everyone.</p>
+        </div>
+    </div>
+
+    <!-- Main navigation links to other pages -->
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="milkyway.html">Milky Way</a></li>
+        <li><a href="solar-system.html" aria-current="page">Solar System</a></li>
+        <li><a href="earth.html">Earth</a></li>
+        <li><a href="mars.html">Mars</a></li>
+        <li><a href="planets.html">All Planets</a></li>
+      </ul>
+    </nav>
+</header>
+
+<!-- Page title for the Solar System page -->
+<h1 class="solar-title">Solar System</h1>
+
+<!-- Space ambience audio (public domain NASA sound) -->
+<audio controls>
+  <source src="audio/space-ambience.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Main container for the animated solar system -->
+<div class="solar-system">
+
+    <!-- Light glow effect behind the Sun -->
+    <div class="light-scatter"></div>
+
+    <!-- Random stardust particles for background decoration -->
+    <div class="stardust" style="top:20%; left:30%;"></div>
+    <div class="stardust" style="top:40%; left:70%;"></div>
+    <div class="stardust" style="top:60%; left:20%;"></div>
+    <div class="stardust" style="top:80%; left:50%;"></div>
+    <div class="stardust" style="top:10%; left:80%;"></div>
+    <div class="stardust" style="top:75%; left:10%;"></div>
+
+    <!-- Sun placed at the center of the solar system -->
+    <div class="sun"></div>
+
+    <!-- Each orbit contains one planet image that rotates using CSS animation -->
+
+    <!-- Mercury orbit -->
+    <div class="orbit orbit1">
+        <div class="planet"><img src="images/mercury.png"></div>
+    </div>
+
+    <!-- Venus orbit -->
+    <div class="orbit orbit2">
+        <div class="planet"><img src="images/venus.png"></div>
+    </div>
+
+    <!-- Earth orbit -->
+    <div class="orbit orbit3">
+        <div class="planet"><img src="images/earth.png"></div>
+    </div>
+
+    <!-- Mars orbit -->
+    <div class="orbit orbit4">
+        <div class="planet"><img src="images/mars.png"></div>
+    </div>
+
+    <!-- Jupiter orbit -->
+    <div class="orbit orbit5">
+        <div class="planet"><img src="images/jupiter.png"></div>
+    </div>
+
+    <!-- Saturn orbit -->
+    <div class="orbit orbit6">
+        <div class="planet"><img src="images/saturn.png"></div>
+    </div>
+
+    <!-- Uranus orbit -->
+    <div class="orbit orbit7">
+        <div class="planet"><img src="images/uranus.png"></div>
+    </div>
+
+    <!-- Neptune orbit -->
+    <div class="orbit orbit8">
+        <div class="planet"><img src="images/neptune.png"></div>
+    </div>
+
+</div> <!-- End of solar-system container -->
+
+<!-- Navigation buttons to move between pages -->
+<div class="nav-buttons">
+    <a href="milkyway.html" class="nav-btn">⟵ Previous</a>
+    <a href="earth.html" class="nav-btn">Next ⟶</a>
+</div>
+
+<!-- Simple JavaScript function for page navigation -->
+<script>
+function goTo(page) {
+    window.location.href = page;
+}
+</script>
+
+</body>
+</html>

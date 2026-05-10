@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Big Planetarium - Planet Earth</title>
+
+  <!-- Makes the layout responsive on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Short description for search engines -->
+  <meta name="description" content="Learn about planet Earth in our accessible guide from Big Planetarium.">
+
+  <!-- Linking the main CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Accessibility skip link for screen readers -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Header section with logo and navigation -->
+  <header class="site-header">
+    <div class="logo-area">
+
+      <!-- Website logo -->
+      <img src="images/logo.png" alt="Site logo" class="site-logo">
+
+      <!-- Website title and tagline -->
+      <div class="logo-text">
+        <h1 class="site-title">Big Planetarium</h1>
+        <p class="tagline">Space is for everyone.</p>
+      </div>
+    </div>
+
+    <!-- Main navigation menu -->
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="milkyway.html">Milky Way</a></li>
+        <li><a href="solar-system.html">Solar System</a></li>
+        <li><a href="earth.html" aria-current="page">Earth</a></li>
+        <li><a href="mars.html">Mars</a></li>
+        <li><a href="planets.html">All Planets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content of the Earth page -->
+  <main id="main">
+    <article class="content-article">
+
+      <!-- Page heading and short introduction -->
+      <header>
+        <h2>Planet Earth</h2>
+        <p>
+          Earth is the third planet from the Sun and the only known world to support life.
+        </p>
+      </header>
+
+      <!-- Layout section containing quick facts and main Earth image -->
+      <section class="planet-layout" aria-labelledby="earth-overview-heading">
+        <div>
+
+          <!-- Quick facts heading -->
+          <h3 id="earth-overview-heading">Quick facts</h3>
+
+          <!-- List of basic Earth facts -->
+          <ul class="fact-list">
+            <li><strong>Type:</strong> Terrestrial (rocky) planet</li>
+            <li><strong>Distance from Sun:</strong> About 150 million km</li>
+            <li><strong>Length of year:</strong> 365.25 Earth days</li>
+            <li><strong>Number of moons:</strong> 1 (the Moon)</li>
+          </ul>
+        </div>
+
+        <!-- Main Earth image with caption -->
+        <figure>
+          <img src="images/earth.png" alt="Planet Earth seen from space, showing blue oceans and white clouds." class="earth-main-img">
+          <figcaption>Earth, our home planet, seen from space.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Fun fact box -->
+      <div class="fact-box">
+        <h3>Did you know?</h3>
+        <p>Earth's rotation is slowing down — days get longer by about 1.7 milliseconds every century.</p>
+      </div>
+
+      <!-- Extra Earth atmosphere image -->
+      <figure>
+        <img src="images/earth-atmosphere.jpg" alt="Earth's glowing atmosphere seen from orbit." class="earth-atmosphere-img">
+        <figcaption>Earth's glowing atmosphere seen from orbit.</figcaption>
+      </figure>
+
+      <!-- Tabs section for switching between different Earth information -->
+      <section class="content-section" aria-labelledby="earth-tabs-heading">
+
+        <!-- Tabs heading with icon -->
+        <h3 id="earth-tabs-heading">
+          <img src="icons/earth-icon.jpg" alt="" class="icon"> Learn more about Earth
+        </h3>
+
+        <p>
+          Use the buttons below to switch between different types of information about Earth.
+        </p>
+
+        <!-- Tabs container controlled by JavaScript -->
+        <div class="tabs" data-tabs>
+
+          <!-- Tab buttons -->
+          <div class="tab-list" role="tablist" aria-label="Earth information">
+            <button type="button" role="tab" aria-selected="true" aria-controls="tab-overview" id="tab-overview-btn" tabindex="0">
+              Overview
+            </button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="tab-atmosphere" id="tab-atmosphere-btn" tabindex="-1">
+              Atmosphere
+            </button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="tab-life" id="tab-life-btn" tabindex="-1">
+              Life on Earth
+            </button>
+          </div>
+
+          <!-- Tab content panels -->
+          <div class="tab-panels">
+
+            <!-- Overview tab -->
+            <section id="tab-overview" role="tabpanel" aria-labelledby="tab-overview-btn">
+              <p>
+                Earth formed about 4.5 billion years ago. Its surface is shaped by plate tectonics,
+                which move continents and create mountains and oceans over long periods of time.
+              </p>
+            </section>
+
+            <!-- Atmosphere tab (hidden by default) -->
+            <section id="tab-atmosphere" role="tabpanel" aria-labelledby="tab-atmosphere-btn" hidden>
+              <p>
+                Earth's atmosphere is mostly nitrogen and oxygen. It protects us from harmful
+                radiation and helps keep the planet warm enough for liquid water.
+              </p>
+            </section>
+
+            <!-- Life on Earth tab (hidden by default) -->
+            <section id="tab-life" role="tabpanel" aria-labelledby="tab-life-btn" hidden>
+              <p>
+                Earth is the only known planet with life. From tiny microbes to huge whales, life
+                has adapted to almost every environment on the planet.
+              </p>
+            </section>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Section showing Earth's interior layers -->
+      <section class="content-section">
+        <h3>
+          <img src="icons/earth-icon.jpg" alt="" class="icon"> Earth's Interior
+        </h3>
+
+        <figure>
+          <img src="images/earth-interior.jpg" alt="Diagram showing Earth's crust, mantle, outer core, and inner core" class="earth-interior-img">
+          <figcaption>A simple diagram showing the layers of Earth.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Section explaining why Earth is important in science -->
+      <section class="content-section" aria-labelledby="earth-reflection-heading">
+        <h3 id="earth-reflection-heading">
+          <img src="icons/earth-icon.jpg" alt="" class="icon"> Why Earth matters in space science
+        </h3>
+
+        <p>
+          By studying Earth, scientists learn how planets work in general. This helps us understand
+          other worlds in our Solar System and beyond, and to ask whether they might also support life.
+        </p>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Back link to Milky Way page -->
+  <a href="milkyway.html" class="back-link">Back to Milky Way</a>
+
+  <!-- Footer with dynamic year -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Big Planetarium - Bristol, UK.</p>
+  </footer>
+
+  <!-- Linking the JavaScript file -->
+  <script src="script.js"></script>
+
+</body>
+</html>

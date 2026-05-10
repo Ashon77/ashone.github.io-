@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Big Planetarium - All Planets</title>
+
+  <!-- Makes the page responsive on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Short description for search engines -->
+  <meta name="description" content="Overview of the planets in our Solar System from Big Planetarium.">
+
+  <!-- Linking the main CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Header with logo and navigation -->
+  <header class="site-header">
+    <div class="logo-area">
+
+      <!-- Website logo -->
+      <img src="images/logo.png" alt="Site logo" class="site-logo">
+
+      <!-- Website title and tagline -->
+      <div class="logo-text">
+        <h1 class="site-title">Big Planetarium</h1>
+        <p class="tagline">Space is for everyone.</p>
+      </div>
+    </div>
+
+    <!-- Main navigation menu -->
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="milkyway.html">Milky Way</a></li>
+        <li><a href="solar-system.html">Solar System</a></li>
+        <li><a href="earth.html">Earth</a></li>
+        <li><a href="mars.html">Mars</a></li>
+        <li><a href="planets.html" aria-current="page">All Planets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content of the All Planets page -->
+  <main id="main">
+
+    <!-- Introduction section for all planets -->
+    <section class="content-section" aria-labelledby="planets-heading">
+      <h2>
+        <img src="icons/galaxy-icon.png" class="icon" alt="Galaxy icon">
+        Planets of our Solar System
+      </h2>
+
+      <p>
+        Our Solar System has eight major planets. The four inner planets are small and rocky.
+        The four outer planets are much larger and mostly made of gas or ice.
+      </p>
+
+      <!-- Grid layout showing all planet cards -->
+      <div class="planet-grid">
+
+        <!-- Mercury card -->
+        <article class="planet-card">
+          <h3>Mercury</h3>
+          <img src="images/mercury.png" alt="Mercury seen from space">
+          <p><strong>Type:</strong> Rocky</p>
+          <p><strong>Fun fact:</strong> Mercury has almost no atmosphere, so its surface gets extremely hot and cold.</p>
+        </article>
+
+        <!-- Venus card -->
+        <article class="planet-card">
+          <h3>Venus</h3>
+          <img src="images/venus.png" alt="Venus seen from space">
+          <p><strong>Type:</strong> Rocky</p>
+          <p><strong>Fun fact:</strong> Venus is hotter than Mercury because of its thick, heat-trapping atmosphere.</p>
+        </article>
+
+        <!-- Earth card (clickable link) -->
+        <a href="earth.html" class="planet-card">
+          <h3>Earth</h3>
+          <img src="images/earth.png" alt="Earth seen from space">
+          <p><strong>Type:</strong> Rocky</p>
+          <p><strong>Fun fact:</strong> Earth is the only known planet with liquid water and complex life.</p>
+        </a>
+
+        <!-- Mars card (clickable link) -->
+        <a href="mars.html" class="planet-card">
+          <h3>Mars</h3>
+          <img src="images/mars.png" alt="Mars seen from space">
+          <p><strong>Type:</strong> Rocky</p>
+          <p><strong>Fun fact:</strong> Mars has the largest volcano in the Solar System, Olympus Mons.</p>
+        </a>
+
+        <!-- Jupiter card -->
+        <article class="planet-card">
+          <h3>Jupiter</h3>
+          <img src="images/jupiter.png" alt="Jupiter seen from space">
+          <p><strong>Type:</strong> Gas giant</p>
+          <p><strong>Fun fact:</strong> Jupiter's Great Red Spot is a giant storm that has lasted for centuries.</p>
+        </article>
+
+        <!-- Saturn card -->
+        <article class="planet-card">
+          <h3>Saturn</h3>
+          <img src="images/saturn.png" alt="Saturn seen from space">
+          <p><strong>Type:</strong> Gas giant</p>
+          <p><strong>Fun fact:</strong> Saturn's rings are made of ice and rock.</p>
+        </article>
+
+        <!-- Uranus card -->
+        <article class="planet-card">
+          <h3>Uranus</h3>
+          <img src="images/uranus.png" alt="Uranus seen from space">
+          <p><strong>Type:</strong> Ice giant</p>
+          <p><strong>Fun fact:</strong> Uranus rotates on its side, so its poles point almost directly at the Sun.</p>
+        </article>
+
+        <!-- Neptune card -->
+        <article class="planet-card">
+          <h3>Neptune</h3>
+          <img src="images/neptune.png" alt="Neptune seen from space">
+          <p><strong>Type:</strong> Ice giant</p>
+          <p><strong>Fun fact:</strong> Neptune has some of the strongest winds in the Solar System.</p>
+        </article>
+
+      </div>
+
+      <!-- Small caption under the grid -->
+      <p class="image-caption" style="text-align:center; margin-top:10px;">
+        Explore Earth and Mars in detail.
+      </p>
+    </section>
+
+    <!-- Quiz section -->
+    <section class="content-section" aria-labelledby="quiz-heading">
+      <h2 id="quiz-heading">Quick planet quiz</h2>
+
+      <p>
+        Test your knowledge with this simple question. You can answer using the buttons or your keyboard.
+      </p>
+
+      <!-- Quiz form controlled by JavaScript -->
+      <form id="planet-quiz" aria-describedby="quiz-feedback">
+        <fieldset>
+          <legend>Which planet is known for its rings?</legend>
+
+          <!-- Quiz answer options -->
+          <div class="quiz-options">
+            <label>
+              <input type="radio" name="planet" value="Earth">
+              Earth
+            </label>
+
+            <label>
+              <input type="radio" name="planet" value="Saturn">
+              Saturn
+            </label>
+
+            <label>
+              <input type="radio" name="planet" value="Mars">
+              Mars
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Button to check the answer -->
+        <button class="btn" type="submit">Check answer</button>
+      </form>
+
+      <!-- Feedback message updated by JavaScript -->
+      <p id="quiz-feedback" role="status" aria-live="polite"></p>
+    </section>
+
+  </main>
+
+  <!-- Back link to Milky Way page -->
+  <a href="milkyway.html" class="back-link">Back to Milky Way</a>
+
+  <!-- Footer with dynamic year -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Big Planetarium - Bristol, UK.</p>
+  </footer>
+
+  <!-- Linking the JavaScript file -->
+  <script src="script.js"></script>
+
+</body>
+</html>

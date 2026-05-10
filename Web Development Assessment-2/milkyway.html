@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Big Planetarium - The Milky Way</title>
+
+  <!-- Making the website responsive on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Short description for search engines -->
+  <meta name="description" content="Learn about the Milky Way galaxy with Big Planetarium's accessible space guide.">
+
+  <!-- Linking the main CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Skip link for accessibility (screen readers) -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Website header containing logo and navigation -->
+  <header class="site-header">
+
+    <!-- Logo area with image and title -->
+    <div class="logo-area">
+      <img src="images/logo.png" alt="Big Planetarium logo" class="site-logo">
+
+      <div class="logo-text">
+        <h1 class="site-title">Big Planetarium</h1>
+        <p class="tagline">Space is for everyone.</p>
+      </div>
+    </div>
+
+    <!-- Main navigation bar -->
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="milkyway.html" aria-current="page">Milky Way</a></li>
+        <li><a href="solar-system.html">Solar System</a></li>
+        <li><a href="earth.html">Earth</a></li>
+        <li><a href="mars.html">Mars</a></li>
+        <li><a href="planets.html">All Planets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero video section under the header -->
+  <section class="hero-video">
+    <video autoplay loop muted playsinline>
+      <source src="videos/planetarium-intro.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Main content of the page -->
+  <main id="main">
+
+    <!-- Introduction section about the Milky Way -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-text">
+        <h2 id="hero-heading">Welcome to the Milky Way</h2>
+
+        <!-- Basic description of the Milky Way -->
+        <p>
+          The Milky Way is our home galaxy: a huge collection of stars, planets, gas, and dust.
+          Our Sun is just one of hundreds of billions of stars orbiting its centre.
+        </p>
+
+        <!-- Button that shows/hides an extra fact using JavaScript -->
+        <button class="btn" type="button" id="fact-toggle-btn" aria-expanded="false" aria-controls="extra-facts">
+          Show a fun Milky Way fact
+        </button>
+
+        <!-- Hidden fun fact revealed by the button -->
+        <p id="extra-facts" class="hidden" tabindex="-1">
+          If you could travel at the speed of light, it would still take about 100,000 years
+          to cross the Milky Way from one side to the other.
+        </p>
+      </div>
+
+      <!-- Image of the Milky Way with caption -->
+      <figure class="hero-image">
+        <img src="images/milky-way-night.jpg" alt="A night sky showing the Milky Way above a calm landscape.">
+        <figcaption>A breathtaking view of the Milky Way from Earth.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Section explaining the structure of the Milky Way -->
+    <section class="content-section" aria-labelledby="structure-heading">
+      <h2 id="structure-heading">How is the Milky Way structured?</h2>
+
+      <!-- Two-column layout for information -->
+      <div class="grid-two">
+        <div>
+          <h3>Spiral arms</h3>
+          <p>
+            The Milky Way is a barred spiral galaxy. Its spiral arms are regions where stars and
+            planets form from clouds of gas and dust.
+          </p>
+        </div>
+
+        <div>
+          <h3>Our place in the galaxy</h3>
+          <p>
+            Our Solar System sits in a minor arm called the Orion Arm, about two thirds of the way
+            out from the galactic centre.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interesting facts section -->
+    <section class="content-section">
+      <h2>Did You Know?</h2>
+      <p>
+        The Milky Way is moving through space at over <strong>2.1 million km/h</strong>.<br>
+        Our galaxy contains more than <strong>100-400 billion stars</strong>.<br>
+        The Milky Way will collide with the Andromeda Galaxy in about <strong>4.5 billion years</strong>.
+      </p>
+    </section>
+
+    <!-- Extra Milky Way image -->
+    <section class="content-section">
+      <h2>Milky Way Over the Horizon</h2>
+      <figure>
+        <img class="small-milkyway" src="images/milky-way-extra.jpg" alt="Milky Way over the horizon">
+        <figcaption>A beautiful view of the Milky Way rising above the horizon.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Explanation of why the Milky Way is important -->
+    <section class="content-section">
+      <h2>Why the Milky Way Matters</h2>
+      <p>
+        Understanding the Milky Way helps scientists learn how galaxies form, how stars are born,
+        and how our Solar System fits into the larger universe.
+      </p>
+    </section>
+
+    <!-- Section showing our location in the galaxy -->
+    <section class="content-section">
+      <h2>Where Are We in the Galaxy?</h2>
+      <p>
+        Our Solar System sits inside a small region called the <strong>Orion Arm</strong>, about
+        two-thirds of the way from the galactic center.
+      </p>
+
+      <figure>
+        <img class="diagram-img" src="images/milky-way-location.jpg" alt="Solar System location in the Milky Way">
+        <figcaption>Our position inside the Milky Way galaxy.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Links to explore planets -->
+    <section class="content-section" aria-labelledby="learn-more-heading">
+      <h2 id="learn-more-heading">Explore the planets</h2>
+
+      <p>
+        The Milky Way contains countless planetary systems. One of them is our own Solar System.
+      </p>
+
+      <!-- Card linking to Solar System page -->
+      <div class="card">
+        <h2>Planets</h2>
+        <p>Learn about our Solar System</p>
+        <a href="solar-system.html">Solar System</a>
+      </div>
+
+      <!-- Buttons linking to planet pages -->
+      <div class="button-row">
+        <a href="solar-system.html" class="btn">Explore Solar System</a>
+        <a class="btn" href="earth.html">Learn about Earth</a>
+        <a class="btn" href="mars.html">Learn about Mars</a>
+        <a class="btn btn-secondary" href="planets.html">See all planets</a>
+      </div>
+    </section>
+
+    <!-- Video section with summary -->
+    <section class="content-section" aria-labelledby="video-heading">
+      <h2 id="video-heading">Watch: A journey through the galaxy</h2>
+
+      <p>
+        This short video gives an overview of our galaxy.
+      </p>
+
+      <!-- Video player -->
+      <div class="video-wrapper">
+        <video controls preload="metadata">
+          <source src="videos/milky-way-overview.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Expandable video summary -->
+      <details>
+        <summary>Video summary</summary>
+        <p>
+          The video shows a zoom-out from Earth to the Solar System, then to the Milky Way galaxy.
+        </p>
+      </details>
+    </section>
+
+  </main>
+
+  <!-- Footer with dynamic year -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Big Planetarium - Bristol, UK.</p>
+  </footer>
+
+  <!-- Linking the JavaScript file -->
+  <script src="script.js"></script>
+
+</body>
+</html>

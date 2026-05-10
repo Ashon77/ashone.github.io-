@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Big Planetarium - Planet Mars</title>
+
+  <!-- Makes the page responsive on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Short description for search engines -->
+  <meta name="description" content="Learn about Mars, the red planet, in this accessible guide from Big Planetarium.">
+
+  <!-- Linking the main CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Header with logo and navigation -->
+  <header class="site-header">
+    <div class="logo-area">
+
+      <!-- Website logo -->
+      <img src="images/logo.png" alt="Site logo" class="site-logo">
+
+      <!-- Website title and tagline -->
+      <div class="logo-text">
+        <h1 class="site-title">Big Planetarium</h1>
+        <p class="tagline">Space is for everyone.</p>
+      </div>
+    </div>
+
+    <!-- Main navigation menu -->
+    <nav aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="milkyway.html">Milky Way</a></li>
+        <li><a href="solar-system.html">Solar System</a></li>
+        <li><a href="earth.html">Earth</a></li>
+        <li><a href="mars.html" aria-current="page">Mars</a></li>
+        <li><a href="planets.html">All Planets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main content of the Mars page -->
+  <main id="main">
+    <article class="content-article">
+
+      <!-- Page heading and introduction -->
+      <header>
+        <h2>Planet Mars</h2>
+        <p>
+          Mars is the fourth planet from the Sun and is often called the “Red Planet” because of its rusty, iron-rich soil.
+        </p>
+      </header>
+
+      <!-- Layout section with quick facts and main Mars image -->
+      <section class="planet-layout" aria-labelledby="mars-overview-heading">
+        <div>
+
+          <!-- Quick facts heading -->
+          <h3 id="mars-overview-heading">Quick facts</h3>
+
+          <!-- List of basic Mars facts -->
+          <ul class="fact-list">
+            <li><strong>Type:</strong> Rocky planet</li>
+            <li><strong>Distance from Sun:</strong> About 228 million km</li>
+            <li><strong>Length of year:</strong> 687 Earth days</li>
+            <li><strong>Moons:</strong> 2 (Phobos and Deimos)</li>
+          </ul>
+        </div>
+
+        <!-- Main Mars image with caption -->
+        <figure>
+          <img src="images/mars.png" alt="Mars seen from space, showing its reddish surface and dark patches.">
+          <figcaption>Mars, known for its dusty red surface.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Mars rover image -->
+      <img src="images/mars-rover.jpg" alt="Mars rover exploring the surface" class="mars-second-img">
+      <p class="image-caption">NASA's Curiosity rover exploring the Martian surface.</p>
+
+      <!-- Fun fact box -->
+      <div class="fact-box">
+        <h3>Did you know?</h3>
+        <p>Mars has the largest volcano in the Solar System — Olympus Mons, which is three times taller than Mount Everest.</p>
+      </div>
+
+      <!-- Tabs section for switching between Mars information -->
+      <section class="content-section" aria-labelledby="mars-tabs-heading">
+
+        <!-- Tabs heading with icon -->
+        <h3 id="mars-tabs-heading">
+          <img src="icons/mars-icon.png" class="icon" alt="Mars icon">
+          Learn more about Mars
+        </h3>
+
+        <p>
+          Use the tabs below to explore different aspects of Mars.
+        </p>
+
+        <!-- Tabs container controlled by JavaScript -->
+        <div class="tabs" data-tabs>
+
+          <!-- Tab buttons -->
+          <div class="tab-list" role="tablist" aria-label="Mars information">
+            <button type="button" role="tab" aria-selected="true" aria-controls="tab-mars-overview" id="tab-mars-overview-btn" tabindex="0">
+              Overview
+            </button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="tab-mars-geology" id="tab-mars-geology-btn" tabindex="-1">
+              Geology
+            </button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="tab-mars-exploration" id="tab-mars-exploration-btn" tabindex="-1">
+              Exploration
+            </button>
+          </div>
+
+          <!-- Tab content panels -->
+          <div class="tab-panels">
+
+            <!-- Overview tab -->
+            <section id="tab-mars-overview" role="tabpanel" aria-labelledby="tab-mars-overview-btn">
+              <p>
+                Mars is smaller than Earth and has a thin atmosphere made mostly of carbon dioxide.
+                Its surface is covered in dust, craters, and ancient riverbeds that suggest water once flowed there.
+              </p>
+            </section>
+
+            <!-- Geology tab (hidden by default) -->
+            <section id="tab-mars-geology" role="tabpanel" aria-labelledby="tab-mars-geology-btn" hidden>
+              <p>
+                Mars has the largest volcano in the Solar System, Olympus Mons, which is about three times taller than Mount Everest.
+                The planet also has a massive canyon system called Valles Marineris.
+              </p>
+            </section>
+
+            <!-- Exploration tab (hidden by default) -->
+            <section id="tab-mars-exploration" role="tabpanel" aria-labelledby="tab-mars-exploration-btn" hidden>
+              <p>
+                Mars has been explored by orbiters, landers, and rovers. NASA's Perseverance rover is currently studying the planet's surface
+                and searching for signs of ancient microbial life.
+              </p>
+            </section>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Mars interior section -->
+      <h2>
+        <img src="icons/mars-icon.png" class="icon" alt="Mars icon">
+        Mars Interior
+      </h2>
+
+      <!-- Mars interior diagram -->
+      <img src="images/mars-interior.jpg" alt="Internal layers of Mars" class="mars-interior-img">
+      <p class="image-caption">A simple diagram showing the internal layers of Mars.</p>
+
+      <!-- Why Mars matters section -->
+      <section class="content-section" aria-labelledby="mars-future-heading">
+        <h3 id="mars-future-heading">
+          <img src="icons/mars-icon.png" class="icon" alt="Mars icon">
+          Why Mars matters
+        </h3>
+
+        <p>
+          Mars is one of the most studied planets because it may have once supported life.
+          Understanding Mars helps scientists learn how planets change over time and whether humans could one day visit or live there.
+        </p>
+
+        <p>
+          Studying Mars also helps scientists understand how planets lose their atmospheres, how climates change over time,
+          and whether humans could one day live on another world.
+        </p>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- Back link to Milky Way page -->
+  <a href="milkyway.html" class="back-link">Back to Milky Way</a>
+
+  <!-- Footer with dynamic year -->
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Big Planetarium - Bristol, UK.</p>
+  </footer>
+
+  <!-- Linking the JavaScript file -->
+  <script src="script.js"></script>
+
+</body>
+</html>
